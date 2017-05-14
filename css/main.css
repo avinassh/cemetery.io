@@ -1,0 +1,45 @@
+body {
+  background-color: #fff;
+}
+.center {
+  text-align: center;
+}
+
+#tombstone {
+  width: 100%;
+}
+
+.tombstone-container {
+  position: relative;
+  width: 275px;
+  height: 365px;
+  display: inline-block;
+}
+
+.chalk {
+  font-family: 'Gloria Hallelujah', cursive;
+  color: #000;
+}
+
+#name {
+  position: absolute;
+  left: 17%;
+  top: 50%;
+  width: 60%;
+  font-weight: bold;
+}
+
+#c-text {
+  position: absolute;
+  left: 26%;
+  top: 61%;
+  width: 40%;
+}
+
+#pepe {
+  height: 30px;
+}
+
+.four-o-four {
+  font-size: 10em;
+}
