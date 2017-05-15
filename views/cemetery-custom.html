@@ -1,0 +1,16 @@
+<div class="center" ng-if="shouldShow">
+  <div class="tombstone-container">
+    <img src="img/tombstone-custom.jpg" id="tombstone">
+    <div id="name" class="chalk">
+      {{ userData.name }}
+      <img src="../img/pepe.jpg" id="pepe" alt="sadness">
+    </div>
+    <div id="c-text" class="chalk" ng-bind="userData.yearsLived"></div>
+  </div>
+  <div class="description" ng-bind-html="userData.description | toTrusted"></div>
+</div>
+
+<div class="center" ng-if="!shouldShow && fourOFour">
+  <div class="four-o-four chalk">404</div>
+  <div>Seems like they're not dead yet.</div>
+</div>
