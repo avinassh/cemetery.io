@@ -3,7 +3,8 @@ var app = angular.module('cApp', ['ngRoute']);
 app.config(function($routeProvider, $locationProvider) {
     $routeProvider
     .when('/', {
-      templateUrl : 'views/cemetery.html'
+      templateUrl : 'views/cemeteries.html',
+      controller: 'gCtrl'
     })
     .when('/:username', {
         templateUrl : 'views/cemetery-custom.html',
@@ -43,7 +44,19 @@ app.controller('cCtrl', function($scope, $routeParams,$location, cemeteries) {
   }, function error() {
     alert('An error occured while fetching data');
   });
+});
 
+app.controller('gCtrl', function($scope, cemeteries) {
+  $scope.shouldShow = false;
+
+  $scope.graves = [];
+  
+  cemeteries.fetchCemeteries().then(function success() {
+      $scope.graves = cemeteries.getAllCemeteries();
+      $scope.shouldShow = true;
+  }, function error() {
+    alert('An error occured while fetching data');
+  });
 });
 
 app.factory('cemeteries', function($http, $q) {
@@ -76,8 +89,19 @@ app.factory('cemeteries', function($http, $q) {
     return false;
   }
 
+  function getAllCemeteries() {
+    return cemeteries.map(function(c) {
+      return {
+        username: c.username,
+        name: c.cemetery_data.name,
+        yearsLived: c.cemetery_data.years_lived
+      };
+    });
+  }
+
   return {
     getCemetery: getCemetery,
+    getAllCemeteries: getAllCemeteries,
     fetchCemeteries: fetchCemeteries
   };
 });

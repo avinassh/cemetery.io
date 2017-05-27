@@ -43,3 +43,8 @@ body {
 .four-o-four {
   font-size: 10em;
 }
+
+.gutter-vertical {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
