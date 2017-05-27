@@ -25,6 +25,15 @@
                 "years_lived": "1986 - 2017",
                 "description": "<p>Here lies V, in rest, finally. A mediocre software developer, wannabe <a href=\"https://github.com/avinassh/rockstar\">Rockstar</a> coder and a failed artist.</p><p>He was born too late to explore the Earth and born too early to explore the Space.</p><p>His last words: \"How do I up my meme game?\".</p>"
             }
+        },
+        
+        {
+            "username": "ox",
+            "cemetery_data": {
+                "name": "ox",
+                "years_lived": "2790-3130",
+                "description": "<p>Here lies ox, in rest, finally. Christian, father, and a loving husband.</p><p> His only dream was to become a pigeon.</p><p>His last words: \"Mid missing.\".</p>"
+            }
         }
     ]
 }
