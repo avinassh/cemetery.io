@@ -34,6 +34,15 @@
                 "years_lived": "2790-3130",
                 "description": "<p>Here lies ox, in rest, finally. Christian, father, and a loving husband.</p><p> His only dream was to become a pigeon.</p><p>His last words: \"Mid missing.\".</p>"
             }
+        },
+
+        {
+            "username": "arion_miles",
+            "cemetery_data": {
+                "name": "Arion Miles",
+                "years_lived": "1992-2017",
+                "description": "<p>Here lies Arion Miles, in rest, finally. A no-name wannabe Pythonista.</p><p> His only contribution to this world was making a platform agnostic Automated Torrent Setup, about which he wouldn't shutup.</p><p>His last words: \"What's this on my dick?\".</p>"
+            }
         }
     ]
 }
