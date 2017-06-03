@@ -43,6 +43,14 @@
                 "years_lived": "1992-2017",
                 "description": "<p>Here lies Arion Miles, in rest, finally. A no-name wannabe Pythonista.</p><p> His only contribution to this world was making <a href=\"https://github.com/ArionMiles/Torrent-Automation\"> a platform agnostic Automated Torrent Setup</a>, about which he wouldn't shutup.</p><p>His last words: \"What's this on my dick?\".</p>"
             }
+        },
+        {
+            "username": "satan",
+            "cemetery_data": {
+                "name": "Satan",
+                "years_lived": "1857 - 1947",
+                "description": "<p>Here lies <a href=\"https://github.com/sacredSatan\" target=\"_blank\">Satan</a>, in rest, finally. A wannabe full-stack developer with sexual attraction to Game Development.</p><p>All he wanted to do was to take over the slack from V, but it had been only 4 days since he joined.</p><p>His last words were: \"Ayy bb\".</p>"
+            }
         }
     ]
 }
