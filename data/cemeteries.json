@@ -56,6 +56,14 @@
                 "years_lived": "1993 - 2002",
                 "description": "<p>Here lies Wojak, in rest, finally. A mediocre programmer with no hobbies, no life and lots of depressing feels.</p><p>He dreamed of reaching lord repmovsd's level, but that didn't happen.</p><p>His last words were: \"I don't want to feel this feel anymore\".</p>"
             }
+        },
+        {
+            "username": "slapbot",
+            "cemetery_data": {
+                "name": "SlapBot",
+                "years_lived": "1998 - 1998",
+                "description": "<p>Here lies SlapBot, in rest, finally. A multi purpose tool guy.</p><p> He created a shit virtual assistant called <a href=\"https://github.com/slapbot/stephanie-va\">Stephanie</a>, a multi purpose assistant girl.</p><p>His last words: \"Stop going to kallege, i am pru in devops by reading APIs\".</p>"
+            }
         }
     ]
 }
