@@ -72,6 +72,14 @@
                 "years_lived": "1998 - 1998",
                 "description": "<p>Here lies SlapBot, in rest, finally. A multi purpose tool guy.</p><p> He created a shit virtual assistant called <a href=\"https://github.com/slapbot/stephanie-va\">Stephanie</a>, a multi purpose assistant girl.</p><p>His last words: \"Stop going to kallege, i am pru in devops by reading APIs\".</p>"
             }
+        },
+        {
+            "username": "frag-o-matic",
+            "cemetery_data": {
+                "name": "Frag O'Matic",
+                "years_lived": "87BCE - 2017CE",
+                "description": "<p>Here lies Frag, in rest, finally. A prolific shitposter when on the clock.</p><p>Last of the clan that could read and write all forms of unmanaged code, he met his end fighting a hoarde of webcancer-n00bs.</p><p>His last words: &quot;<pre>npm install teach_yourself_a_real_language.js</pre>&quot;.</p>"
+            }
         }
     ]
 }
