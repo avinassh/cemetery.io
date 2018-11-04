@@ -1,24 +1,23 @@
+/* eslint-disable no-var, prefer-destructuring */
+
 var app = angular.module('cApp', ['ngRoute']);
 
 app.config(function($routeProvider, $locationProvider) {
-    $routeProvider
-    .when('/', {
-      templateUrl : 'views/cemeteries.html',
-      controller: 'gCtrl'
-    })
-    .when('/:username', {
-        templateUrl : 'views/cemetery-custom.html',
-        controller: 'cCtrl'
-    })
-    .otherwise({
-        templateUrl: 'views/404.html'
-    });
-    $locationProvider.html5Mode(true);
+  $routeProvider.when('/', {
+    templateUrl: 'views/cemeteries.html',
+    controller: 'gCtrl'
+  }).when('/:username', {
+    templateUrl: 'views/cemetery-custom.html',
+    controller: 'cCtrl'
+  }).otherwise({
+    templateUrl: 'views/404.html'
+  });
+  $locationProvider.html5Mode(true);
 });
 
-app.controller('cCtrl', function($scope, $routeParams,$location, cemeteries) {
+app.controller('cCtrl', function($scope, $routeParams, $location, cemeteries) {
   var username = $routeParams.username.toLowerCase();
-  
+
   $scope.shouldShow = false;
   $scope.fourOFour = false;
 
@@ -27,10 +26,10 @@ app.controller('cCtrl', function($scope, $routeParams,$location, cemeteries) {
     yearsLived: '',
     description: ''
   };
-  
+
   cemeteries.fetchCemeteries().then(function success() {
     var cemetery = cemeteries.getCemetery(username);
-    if(cemetery) {
+    if (cemetery) {
       $scope.userData = {
         name: cemetery.cemetery_data.name,
         yearsLived: cemetery.cemetery_data.years_lived,
@@ -50,10 +49,10 @@ app.controller('gCtrl', function($scope, cemeteries) {
   $scope.shouldShow = false;
 
   $scope.graves = [];
-  
+
   cemeteries.fetchCemeteries().then(function success() {
-      $scope.graves = cemeteries.getAllCemeteries();
-      $scope.shouldShow = true;
+    $scope.graves = cemeteries.getAllCemeteries();
+    $scope.shouldShow = true;
   }, function error() {
     alert('An error occured while fetching data');
   });
@@ -61,11 +60,11 @@ app.controller('gCtrl', function($scope, cemeteries) {
 
 app.factory('cemeteries', function($http, $q) {
   var cemeteries = [];
-  
-  function fetchCemeteries(data) {
+
+  function fetchCemeteries() {
     var deferred = $q.defer();
-    if(cemeteries.length) {
-      deferred.resolve(); 
+    if (cemeteries.length) {
+      deferred.resolve();
     }
     else {
       $http({
@@ -74,17 +73,17 @@ app.factory('cemeteries', function($http, $q) {
       }).then(function success(response) {
         cemeteries = response.data.cemeteries;
         deferred.resolve();
-      }, function error(response) {
+      }, function error() {
         deferred.reject();
-      }); 
+      });
     }
     return deferred.promise;
   }
 
   function getCemetery(username) {
-    for (var i = 0; i < cemeteries.length; ++i) {
-      if(cemeteries[i].username == username)
-        return cemeteries[i];
+    var i;
+    for (i = 0; i < cemeteries.length; ++i) {
+      if (cemeteries[i].username === username) return cemeteries[i];
     }
     return false;
   }
@@ -108,6 +107,6 @@ app.factory('cemeteries', function($http, $q) {
 
 app.filter('toTrusted', function($sce){
   return function(text) {
-      return $sce.trustAsHtml(text);
+    return $sce.trustAsHtml(text);
   };
 });
