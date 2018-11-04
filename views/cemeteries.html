@@ -1,16 +1,15 @@
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<div class="container gutter-vertical">
+<div class="container cemetery-container">
   <div class="row">
-    <div class="col-md-3 col-sm-6 col-xs-12 text-center" ng-repeat="g in graves">
+    <div class="grave col-md-3 col-sm-6 col-xs-12 text-center" ng-repeat="g in graves">
       <a ng-href="{{g.username}}"> 
-      <div class="tombstone-container text-center">
-        <img src="img/tombstone-custom.jpg" id="tombstone">
-        <div id="name" class="chalk">
-          {{ g.name }}
-          <img src="../img/pepe.jpg" id="pepe" alt="sadness">
+        <div class="tombstone-container">
+          <img class="tombstone" src="img/tombstone-custom.jpg">
+          <div class="text-chalk grave-name">
+            {{ g.name }}
+            <img src="../img/pepe.jpg" class="pepe" alt="sadness">
+          </div>
+          <div class="text-chalk grave-years" ng-bind="g.yearsLived"></div>
         </div>
-        <div id="c-text" class="chalk" ng-bind="g.yearsLived"></div>
-      </div>
       </a>    
     </div>
   </div>

@@ -1,27 +1,27 @@
 body {
   background-color: #fff;
-}
-.center {
-  text-align: center;
+  color: #000;
 }
 
-#tombstone {
-  width: 100%;
+.cemetery-container {
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
+
+.grave { position: relative; }
+.grave > a { color: #000; }
 
 .tombstone-container {
   position: relative;
   width: 275px;
   height: 365px;
   display: inline-block;
+  text-align: center;
 }
 
-.chalk {
-  font-family: 'Gloria Hallelujah', cursive;
-  color: #000;
-}
+.tombstone { width: 100%; }
 
-#name {
+.grave-name {
   position: absolute;
   left: 17%;
   top: 50%;
@@ -29,22 +29,21 @@ body {
   font-weight: bold;
 }
 
-#c-text {
+.pepe { height: 30px; }
+
+.grave-years {
   position: absolute;
   left: 26%;
   top: 61%;
   width: 40%;
 }
 
-#pepe {
-  height: 30px;
-}
+.grave-page-container { max-width: 700px; }
 
-.four-o-four {
-  font-size: 10em;
-}
+.grave-description { font-size: 1.5em; }
+.grave-description p:not(:first-child) { margin: 1.5em 0; }
 
-.gutter-vertical {
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
+.four-o-four { font-size: 10em; }
+
+.text-chalk { font-family: 'Gloria Hallelujah', cursive; }
+.text-cursive { font-family: 'Courgette', cursive; }
