@@ -1,17 +1,18 @@
-<link rel="stylesheet" href="https://unpkg.com/sakura.css/css/sakura.css" type="text/css">
-<div class="center" ng-if="shouldShow">
-  <div class="tombstone-container">
-    <img src="img/tombstone-custom.jpg" id="tombstone">
-    <div id="name" class="chalk">
-      {{ userData.name }}
-      <img src="../img/pepe.jpg" id="pepe" alt="sadness">
+<div class=" grave-page-container container">
+  <div class="grave text-center" ng-if="shouldShow">
+    <div class="tombstone-container">
+      <img class="tombstone" src="img/tombstone-custom.jpg">
+      <div class="text-chalk grave-name">
+        {{ userData.name }}
+        <img src="../img/pepe.jpg" class="pepe" alt="sadness">
+      </div>
+      <div class="grave-years text-chalk" ng-bind="userData.yearsLived"></div>
     </div>
-    <div id="c-text" class="chalk" ng-bind="userData.yearsLived"></div>
+    <div class="grave-description text-cursive" ng-bind-html="userData.description | toTrusted"></div>
   </div>
-  <div class="description" ng-bind-html="userData.description | toTrusted"></div>
-</div>
 
-<div class="center" ng-if="!shouldShow && fourOFour">
-  <div class="four-o-four chalk">404</div>
-  <div>Seems like they're not dead yet.</div>
+  <div class="text-center text-cursive" ng-if="!shouldShow && fourOFour">
+    <div class="four-o-four">4👻4</div>
+    <div class="h2">Seems like they're not dead yet.</div>
+  </div>
 </div>
