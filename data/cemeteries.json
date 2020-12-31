@@ -42,14 +42,6 @@
             }
         },
         {
-            "username": "arion_miles",
-            "cemetery_data": {
-                "name": "Arion Miles",
-                "years_lived": "1992-2017",
-                "description": "<p>Here lies Arion Miles, in rest, finally. A no-name wannabe Pythonista.</p><p> His only contribution to this world was making <a href=\"https://github.com/ArionMiles/Torrent-Automation\"> a platform agnostic Automated Torrent Setup</a>, about which he wouldn't shutup.</p><p>His last words: \"What's this on my dick?\".</p>"
-            }
-        },
-        {
             "username": "satan",
             "cemetery_data": {
                 "name": "Satan",
